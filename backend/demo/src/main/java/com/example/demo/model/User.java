@@ -29,15 +29,19 @@ public class User {
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="contact_number")
+	private String contactNumber;
+	
 	@Column(name="admin")
 	private boolean admin;
 
-	public User(String firstName, String lastName, String address, String email, boolean admin) {
+	public User(String firstName, String lastName, String address, String email, String contactNumber, boolean admin) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
 		this.email = email;
+		this.contactNumber = contactNumber;
 		this.admin = admin;
 	}
 

@@ -7,24 +7,15 @@ public class Racket extends Item {
 	
 	// Attributes
 	private String model;
-	private Integer headSize;
-	private Integer weight;
-	private Integer balance;
-	private Integer length;
-	private Integer[] recTension;
-	private Integer[] stringPattern;
+	private Integer year;
+	private Integer tension;
 	
 	// Constructors
-	public Racket(String model, Integer headSize, Integer weight, Integer balance, Integer length, Integer[] recTension,
-			Integer[] stringPattern) {
+	public Racket(String model, Integer year, Integer tension) {
 		super();
 		this.model = model;
-		this.headSize = headSize;
-		this.weight = weight;
-		this.balance = balance;
-		this.length = length;
-		this.recTension = recTension;
-		this.stringPattern = stringPattern;
+		this.year = year;
+		this.tension = tension;
 	}
 
 	public Racket() {
@@ -36,6 +27,7 @@ public class Racket extends Item {
 		super(price);
 		// TODO Auto-generated constructor stub
 	}
+
 	
 	
 }
