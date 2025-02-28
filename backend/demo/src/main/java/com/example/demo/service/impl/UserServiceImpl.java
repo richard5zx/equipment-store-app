@@ -33,6 +33,16 @@ public class UserServiceImpl implements UserService {
 	public List<User> findUserByUserId(int user_id) {
 		return userRepository.findById(user_id);
 	}
+	
+	@Override
+	public boolean exist(String username, String password) {
+		List<User> list = userRepository.findByUsernameAndPassword(username, password);
+		if (list.isEmpty()) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	// U
 	@Override

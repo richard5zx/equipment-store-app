@@ -12,6 +12,7 @@ public interface UserService {
 	// R
 	public List<User> getAllUser();
 	public List<User> findUserByUserId(int user_id);
+	public boolean exist(String username, String password);
 	
 	// U
 	public void updateUser(int user_id, String first_name, String last_name, String username, String password, String address, String email, String contact_number);

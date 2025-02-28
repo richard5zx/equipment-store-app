@@ -18,6 +18,8 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	@Query(value="SELECT * FROM user WHERE user LIKE %?1%", nativeQuery=true)
 	List<User> findUserByUser(String User);
 	
+	List<User> findByUsernameAndPassword(String username, String password);
+	
 	@Query(value="SELECT * FROM user WHERE date_time BETWEEN ?1 AND ?2", nativeQuery=true)
 	List<User> findUserByTime(Timestamp start, Timestamp end);
 	
