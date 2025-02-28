@@ -14,7 +14,7 @@ public interface UserService {
 	public List<User> findUserByUserId(int user_id);
 	
 	// U
-	public void updateUser(int user_id, String first_name, String last_name, String address, String email, String contact_number);
+	public void updateUser(int user_id, String first_name, String last_name, String username, String password, String address, String email, String contact_number);
 	
 	// D
 	public void removeUser(int user_id);

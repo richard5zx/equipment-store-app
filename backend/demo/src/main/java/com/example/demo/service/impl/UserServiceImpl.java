@@ -1,7 +1,6 @@
 package com.example.demo.service.impl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,12 +36,14 @@ public class UserServiceImpl implements UserService {
 
 	// U
 	@Override
-	public void updateUser(int user_id, String first_name, String last_name, String address, String email,
-			String contact_number) {
+	public void updateUser(int user_id, String first_name, String last_name, String username, String password, String address, 
+			String email, String contact_number) {
 		List<User> list = userRepository.findById(user_id); 
 		User user = list.get(0);
 		user.setFirstName(first_name);
 		user.setLastName(last_name);
+		user.setUsername(username);
+		user.setPassword(password);
 		user.setAddress(address);
 		user.setEmail(email);
 		user.setContactNumber(contact_number);

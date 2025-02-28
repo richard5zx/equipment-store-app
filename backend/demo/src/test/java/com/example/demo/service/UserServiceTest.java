@@ -14,11 +14,11 @@ public class UserServiceTest {
 	@Autowired
 	UserServiceImpl userServiceImpl;
 	
-	//@Test
+	@Test
 	public void addUserTest() {
-		User user1 = new User("Harry", "Osborne", "New York City", "harry@goblin.com", "0451073088", false);
-		User user2 = new User("Peter", "Parker", "Queens, New York City", "spider@man.com", "123123123", false);
-		User user3 = new User("Richard", "Chao", "2 Menzies Rd. Marsfield 2122", "richardchao2009@gmail.com", "0450287263", true);
+		User user1 = new User("Harry", "Osborne", "New York City","the123", "gob123", "harry@goblin.com", "0451073088", false);
+		User user2 = new User("Peter", "Parker", "Queens, New York City","spid123", "man123", "spider@man.com", "123123123", false);
+		User user3 = new User("Richard", "Chao","15chaorh1", "password", "2 Menzies Rd. Marsfield 2122", "richardchao2009@gmail.com", "0450287263", true);
 		userServiceImpl.addUser(user1);
 		userServiceImpl.addUser(user2);
 		userServiceImpl.addUser(user3);
@@ -43,7 +43,7 @@ public class UserServiceTest {
 	
 	//@Test
 	public void updateUserTest() {
-		userServiceImpl.updateUser(4, "Steve", "Jobs", "California", "Steve@jobs.com", "88888888");
+		userServiceImpl.updateUser(4, "Steve", "Jobs","apple", "watch", "California", "Steve@jobs.com", "88888888");
 	}
 	
 	//@Test
